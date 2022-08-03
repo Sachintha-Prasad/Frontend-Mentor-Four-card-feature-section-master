@@ -1,0 +1,176 @@
+// google fonts link 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+// variables 
+    // fonts 
+        $font-primary: 'Poppins', sans-serif;
+
+    // colors 
+        // primary
+            $Red: hsl(0, 78%, 62%);
+            $Cyan: hsl(180, 62%, 55%);
+            $Orange: hsl(34, 97%, 64%);
+            $Blue: hsl(212, 86%, 64%);
+
+        // neutral 
+            $Very-Dark-Blue: hsl(234, 12%, 34%);
+            $Grayish-Blue: hsl(229, 6%, 66%);
+            $Very-Light-Gray: hsl(0, 0%, 98%);
+        
+    // display sizes
+        $mobile: 375px;
+        $tablet: 768px;
+
+// mixin
+    @mixin flex($direction, $align, $justify) {
+        display: flex;
+        flex-direction: $direction;
+        align-items: $align;
+        justify-content: $justify;
+    }
+
+//reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: $Very-Light-Gray;
+    font-family: $font-primary;
+}
+
+
+
+// content 
+body {
+    min-height: 100vh;
+
+    @include flex(row, center, center);
+}
+
+.main-container {
+    width: min(98%, 130rem);
+
+    @include flex(column, center, center);
+    gap: 4rem;
+    
+    .header-container {
+        @include flex(column, center, center);
+
+        .header-title {
+            font-size: 2.8rem;
+            font-weight: 200;
+            color: $Very-Dark-Blue;
+            text-align: center;
+
+            width: min(98%, 50rem);
+            margin-bottom: .2em;
+        }
+        
+        .header-sub-title {
+            font-size: 2.6rem;
+            font-weight: 600;
+            color: $Very-Dark-Blue;
+            text-align: center;
+
+            width: min(98%, 50rem);
+            margin-bottom: .8em;
+        }
+        
+        .header-description {
+            font-size: 1.5rem;
+            color: $Grayish-Blue;
+            text-align: center;
+
+            width: min(90%, 50rem);
+        }
+    }
+    
+    .feature-container {
+        @include flex(row, center, start);
+        gap: 4rem;
+        
+        .cyan-card {
+            border-top: .5rem solid $Cyan;
+        }
+
+        .red-card {
+            border-top: .5rem solid $Red;
+        }
+
+        .orange-card {
+            border-top: .5rem solid $Orange;
+        }
+
+        .blue-card {
+            border-top: .5rem solid $Blue;
+        }
+
+        .card-container {
+            background-color: $Very-Light-Gray;
+            box-shadow: 0 .5rem 1rem .1rem hsla(0, 0%, 56%, 0.247);
+            border-radius: .8rem;
+            
+            width: min(100%, 40rem);
+            padding: 2em;
+
+
+            @include flex(column, center, center);
+            gap: 1rem;
+
+            .card-title {
+                font-size: 2rem;
+                color: $Very-Dark-Blue;
+            }
+
+            .description-container {
+                width: min(90%, 40rem);
+                height: min(10rem, 100%);
+                margin-bottom: 5rem;
+
+                .feature-description {
+                    font-size: 1.5rem;
+                    color: $Grayish-Blue;
+                }
+            }
+
+            & img {
+                width: min(100%, 6rem);
+                align-self: end;
+            }
+        }
+        
+        .middle-card-set {
+            max-width: 40rem;
+            @include flex(column, center, center);
+            gap: 4rem;
+        }
+
+    }
+}
+
+@media (max-width: $tablet) {
+    .main-container {
+        width: 90%;
+        margin: 2rem;
+
+        .feature-container {
+            flex-direction: column;
+            
+        } 
+    }
+}
+
+@media (max-width: $mobile) {
+    html {
+        font-size: 55%;
+    }
+}

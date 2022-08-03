@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: hsl(0deg, 0%, 98%);
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-container {
+  width: min(98%, 130rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+.main-container .header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main-container .header-container .header-title {
+  font-size: 2.8rem;
+  font-weight: 200;
+  color: hsl(234deg, 12%, 34%);
+  text-align: center;
+  width: min(98%, 50rem);
+  margin-bottom: 0.2em;
+}
+.main-container .header-container .header-sub-title {
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: hsl(234deg, 12%, 34%);
+  text-align: center;
+  width: min(98%, 50rem);
+  margin-bottom: 0.8em;
+}
+.main-container .header-container .header-description {
+  font-size: 1.5rem;
+  color: hsl(229deg, 6%, 66%);
+  text-align: center;
+  width: min(90%, 50rem);
+}
+.main-container .feature-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 4rem;
+}
+.main-container .feature-container .cyan-card {
+  border-top: 0.5rem solid hsl(180deg, 62%, 55%);
+}
+.main-container .feature-container .red-card {
+  border-top: 0.5rem solid hsl(0deg, 78%, 62%);
+}
+.main-container .feature-container .orange-card {
+  border-top: 0.5rem solid hsl(34deg, 97%, 64%);
+}
+.main-container .feature-container .blue-card {
+  border-top: 0.5rem solid hsl(212deg, 86%, 64%);
+}
+.main-container .feature-container .card-container {
+  background-color: hsl(0deg, 0%, 98%);
+  box-shadow: 0 0.5rem 1rem 0.1rem hsla(0deg, 0%, 56%, 0.247);
+  border-radius: 0.8rem;
+  width: min(100%, 40rem);
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.main-container .feature-container .card-container .card-title {
+  font-size: 2rem;
+  color: hsl(234deg, 12%, 34%);
+}
+.main-container .feature-container .card-container .description-container {
+  width: min(90%, 40rem);
+  height: min(10rem, 100%);
+  margin-bottom: 5rem;
+}
+.main-container .feature-container .card-container .description-container .feature-description {
+  font-size: 1.5rem;
+  color: hsl(229deg, 6%, 66%);
+}
+.main-container .feature-container .card-container img {
+  width: min(100%, 6rem);
+  align-self: end;
+}
+.main-container .feature-container .middle-card-set {
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    width: 90%;
+    margin: 2rem;
+  }
+  .main-container .feature-container {
+    flex-direction: column;
+  }
+}
+@media (max-width: 375px) {
+  html {
+    font-size: 55%;
+  }
+}/*# sourceMappingURL=main.css.map */
